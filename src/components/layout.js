@@ -1,3 +1,5 @@
+/* global window */
+
 import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql, Link } from "gatsby";
@@ -63,22 +65,20 @@ const Layout = ({ children }) => {
   const toTopIsVisible = useToTop();
   const siteMetadata = useSiteMetadata();
 
-  console.log(siteMetadata);
   return (
     <>
       <Header siteTitle={siteMetadata.title} />
-      <Page>
+      <Page className="hasTransition">
         <Link to="/">Home</Link>
         <Link to="/page2">Page 2</Link>
         <Link to="/page3">Page 3</Link>
-        <PageTransition>
-          <main id="pageTop">{children}</main>
-          <footer>© {new Date().getFullYear()}</footer>
 
-          <ToTop to="#pageTop" className={toTopIsVisible ? "isVisible" : null}>
-            <FiArrowUp />
-          </ToTop>
-        </PageTransition>
+        <main id="pageTop">{children}</main>
+        <footer>© {new Date().getFullYear()}</footer>
+
+        <ToTop to="#pageTop" className={toTopIsVisible ? "isVisible" : null}>
+          <FiArrowUp />
+        </ToTop>
       </Page>
     </>
   );

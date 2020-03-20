@@ -4,12 +4,12 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
-    {
-      resolve: `gatsby-plugin-page-transitions`,
-      options: {
-        transitionTime: 500,
-      },
-    },
+    // {
+    //  resolve: `gatsby-plugin-page-transitions`,
+    //  options: {
+    //    transitionTime: 500,
+    //  },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

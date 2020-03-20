@@ -88,3 +88,31 @@ ol {
 strong {
   font-weight: 700;
 }
+
+.hasTransition {
+  &.transitionIn {
+    animation-duration: 2s;
+    animation-name: transitionIn;
+  }
+  &.transitionOut {
+    animation-duration: 0.5s;
+    animation-name: transitionOut;
+  }
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes transitionOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
