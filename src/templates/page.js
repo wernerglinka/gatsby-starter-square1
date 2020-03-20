@@ -1,9 +1,16 @@
 import React from 'react';
 import {graphql} from 'gatsby';
 import mdStringToHTML from "../utilities/md-to-html";
+
 import components, {Layout} from '../components/index';
 
-const Page = props => {
+
+
+/** ***************************************************************************
+ *  Home page
+ *************************************************************************** */
+
+ const Page = props => {
    const fields = props.data.markdownRemark.frontmatter;
    const pageSections = fields.sections;
   
