@@ -33,3 +33,7 @@ Generally, page content is accessed with graphql in the page template.
 
 Content for components is stored in json files and located in the src/data directory.
 Generally, component content is accessed with hooks (using static graphql queries).
+
+## Page Transitions
+
+- gatsby-plugin-page-transitions
